@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, modalController } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import EmptyModalVue from './EmptyModal.vue';
 import IonicModalVue from './IonicModal.vue';
@@ -36,7 +36,7 @@ export default defineComponent({
   }, setup() {
 
     async function openModal(modalComponent: any, cssClass?: string, props?: any, backdropDismiss = true) {
-      const { modalController } = await import('@ionic/vue');
+     
       cssClass = cssClass ? cssClass : '';
       props = props ? props : {};
       return modalController
